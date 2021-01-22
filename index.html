@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="index.css">
+<!--Finne en bedre og mer passende tittel
+i tilleg legge til custom bilde ved tiden av title, må undersøke hvordan man gjør det-->
+<title>Shelter Animals</title>
+</head>
+
+<!-- Top-nav bar
+Muligens bytte farger, får se ann ettersom nettsiden blir laget-->
+<div class="topnav">
+  <a class="active" href="#">Home</a>
+  <a href="#">Shelters</a>
+  <a href="#">Animals</a>
+  <a href="#">Donate</a>
+  <a href="#">Contact</a>
+  <!-- Dropdown menu in the top-nav bar
+  legg inn ting som skal under dropdown menyen i navbaren-->
+  <div class="dropdown">
+   <button class="dropbtn">About
+     <i class="fa fa-caret-down"></i>
+   </button>
+   <div class="dropdown-content">
+     <a href="#">Animal shelters</a>
+     <a href="#">Our team</a>
+     <a href="#">Our work</a>
+   </div>
+ </div>
+ <!--login og signup på siden av navbaren
+ OPS pass på og gjennbruke topnav classen!-->
+ <div class="topnav login">
+ <a href="#">Login</a>
+ <a href="#">Sign up</a>
+</div>
+</div>
+
+<!-- Hero-Home -->
+  <div class="hero-img">
+
+    <div class="hero-text">
+      <h1>The Animal Shelter</h1>
+      <span>Save a life today</span>
+    </div>
+  </div>
+
+<!--Galleri for bilder av dyr som kan adopteres. OPS legge inn bakgrunnsbilde senere.
+helst noe som er lite frage: svart,hvit eller grå
+
+Husk til senere å bruke <script>
+er den beste løsningen jeg har funnet til nå, usikker på om det er mer ryddig og legge det in en egen fil
+men usikker på hvordan jeg starter scripted riktig sted da. må spørre om hjelp-->
+
+<div class="animalgallery">
+  <!--container-->
+  <div class="slideshow-container">
+<img src="" alt="">
+    <!--Bilder med tekst og nummer, finne mer forklarende classes-->
+    <div class="mySlides fade">
+      <div class="numbertext">1/4</div>
+      <img src="gallery1.jgp" alt="" style="height:100%">
+      <div class="text">Caption text</div>
+    </div>
+
+    <div class="mySlides fade">
+      <div class="numbertext">2/4</div>
+      <img src="gallery2.jgp" style="width:100%">
+      <div class="text">Caption two</div>
+    </div>
+
+    <div class="mySlides fade">
+      <div class="numbertext">3/4</div>
+      <img src="gallery3.jgp" style="width:100%">
+      <div class="text">Caption three</div>
+    </div>
+
+    <div class="mySlides fade">
+      <div class="numbertext">4/4</div>
+      <img src="gallery1.jgp" style="width:100%">
+      <div class="text">Caption four</div>
+    </div>
+
+    <!--Buttons for og bytte bilder-->
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+  </div>
+  <br>
+
+  <!--Sirkelne som viser hvilket bilde du er på-->
+  <div style="text-align:center">
+    <span class="dot" onclick="currentSlide(1)"></span>
+    <span class="dot" onclick="currentSlide(2)"></span>
+    <span class="dot" onclick="currentSlide(3)"></span>
+    <span class="dot" onclick="currentSlide(4)"></span>
+  </div>
+
+<!--Script for animalgallery
+VET IKKE OM FUNKER OG MÅ STYLES-->
+  <script type="text/javascript">
+  var slideIndex = 1;
+showSlides(slideIndex);
+
+// Next/previous controls
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+// Thumbnail image controls
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+}
+  </script>
+</div>
+
+
+<!-- Har funnet noen linker til nettsider med samme eller lignende funskjon og tema
+tenkte at det kan være lurt å ta en titt på de en gang iblandt for å få et bedre bilde av hvordan det skal se riktig
+og mer profosjonelt ut.
+
+Pass på og ikke kopiere deler heller bruke som inso for featueres eller fargekombinasjon til nettsiden
+også se etter featueres som siden min mangler. som kontakt info nederst på siden eller info bokser.
+
+I tillegg hold et øye med andre nettsider for å unngå dårlig utført featueres. f.eks link 4 for navbaren
+er veldig stor og forsvinner plutselig og fort. i tilleg blokker den Heroen. pluss ikonene dekker over X-en på
+popuppen
+
+https://projectworldimpact.com/cause/animal-shelters?gclid=CjwKCAiAo5qABhBdEiwAOtGmbjU3-PZufT281ekciskJcsUaqPULfgubNaty2ygqVak_a9wSoO63rBoCDjkQAvD_BwE
+
+https://www.petfinder.com/
+
+https://www.fod.no/english/
+
+https://www.rooterville.org/get-involved?gclid=CjwKCAiAo5qABhBdEiwAOtGmbgjthg4HyHr7-J9yXpGSoOaw39bA4WfZ-cSZOW2M3yk59IntcuQaMxoCvFcQAvD_BwE#ADOPTANANIMAL
+
+https://projectworldimpact.com/cause/animal-shelters?gclid=CjwKCAiAo5qABhBdEiwAOtGmbps6tovz4FYWOgYY3Lt0oC417vo6vPu-JJk6umNdXhOscmgHJOAJchoCKmQQAvD_BwE
+
+https://www.rspca.org.uk/findapet
+
+https://www.aspca.org/adopt-pet
+-->
